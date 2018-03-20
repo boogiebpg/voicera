@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2018-03-17 13:14:23
+  end_time: 2018-03-17 13:14:23
+  highlight_text: MyText1
+
+two:
+  start_time: 2018-03-17 13:14:23
+  end_time: 2018-03-17 13:14:23
+  highlight_text: MyText2

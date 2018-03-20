@@ -1,0 +1,8 @@
+<% content_for :assets do %>
+  <%= javascript_include_tag('meetings_list') %>
+<% end %>
+
+<h3>Meetings List</h3>
+
+<%= render 'meetings_list', meetings: @meetings %>
+<%= link_to 'Create New Meeting', new_meeting_path, class: 'btn btn-primary btn-sm' %>

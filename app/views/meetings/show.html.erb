@@ -1,0 +1,60 @@
+<% content_for :assets do %>
+  <%= javascript_include_tag('highlights_list') %>
+<% end %>
+
+<h3>
+  <%= "Meeting ##{@meeting.id}" %>
+</h3>
+
+<table class='table table-striped table-bordered'>
+  <tr>
+    <td>
+      Title
+    </td>
+    <td>
+      <%= @meeting.title %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Organizer Email
+    </td>
+    <td>
+      <%= @meeting.organizer_email %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Start Time
+    </td>
+    <td>
+      <%= @meeting.start_time %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      End Time
+    </td>
+    <td>
+      <%= @meeting.end_time %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Audio File Location
+    </td>
+    <td>
+      <%= @meeting.audio_file_location %>
+    </td>
+  </tr>
+</table>
+
+<p>
+  <%= render 'highlights/highlights_list', highlights: @highlights %>
+</p>
+
+<%= link_to 'Create New Highlight', new_meeting_highlight_path(@meeting.id), class: 'btn btn-primary btn-sm' %>
+
+<p>
+  <%= link_to 'Back', meetings_path %>
+</p>

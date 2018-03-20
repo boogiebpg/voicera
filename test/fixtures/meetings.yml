@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyMeeting1
+  organizer_email: MyString
+  start_time: 2018-03-17 13:08:20
+  end_time: 2018-03-17 13:08:20
+  audio_file_location: MyString
+
+two:
+  title: MyMeeting2
+  organizer_email: MyString
+  start_time: 2018-03-17 13:08:20
+  end_time: 2018-03-17 13:08:20
+  audio_file_location: MyString

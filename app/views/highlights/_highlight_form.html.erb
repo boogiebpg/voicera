@@ -1,0 +1,21 @@
+<%= form_for highlight, url: meeting_highlights_path(meeting) do |f| %>
+  <div class='form-group'>
+    <label for='start_time'>
+      Start Time
+    </label>
+    <%= f.text_field :start_time, class: 'form-control', id: 'start_time' %>
+  </div>
+  <div class='form-group'>
+    <label for='end_time'>
+      End Time
+    </label>
+    <%= f.text_field :end_time, class: 'form-control', id: 'end_time' %>
+  </div>
+  <div class='form-group'>
+    <label for='highlight_text'>
+      Highlight Text
+    </label>
+    <%= f.text_field :highlight_text, class: 'form-control', id: 'highlight_text' %>
+  </div>
+  <%= f.submit 'Create', class: 'btn btn-primary btn-sm' %>
+<% end %>

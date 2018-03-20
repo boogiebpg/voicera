@@ -1,0 +1,49 @@
+<h3>Highlights List</h3>
+  <% unless highlights.count == 0 %>
+    <div id='highlights_list'>
+      <input class="search" placeholder="Search" />
+      <button class='sort btn btn-secondary btn-sm' data-sort="start_time">
+        Sort by Start Time
+      </button>
+      <button class="sort btn btn-secondary btn-sm" data-sort="end_time">
+        Sort by End Time
+      </button>
+      <button class="sort btn btn-secondary btn-sm" data-sort="highlight_text">
+        Sort by Highlight Text
+      </button>
+      <table class='table table-striped table-bordered'>
+        <thead>
+          <tr>
+            <th>
+              Start Time
+            </th>
+            <th>
+              End Time
+            </th>
+            <th>
+              Highlight Text
+            </th>
+          </tr>
+        </thead>
+        <tbody class='list'>
+          <% highlights.each do |highlight| %>
+            <tr>
+              <td class='start_time'>
+                <%= highlight.start_time %>
+              </td>
+              <td class='end_time'>
+                <%= highlight.end_time %>
+              </td>
+              <td class='highlight_text'>
+                <%= highlight.highlight_text %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+  <p>
+    No highlights for this meeting.
+  </p>
+<% end %>

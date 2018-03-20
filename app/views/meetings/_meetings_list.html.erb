@@ -1,0 +1,48 @@
+<% if meetings.count > 0 %>
+  <div id='meetings_list'>
+    <input class="search" placeholder="Search" />
+    <button class='sort btn btn-secondary btn-sm' data-sort="title">
+      Sort by title
+    </button>
+    <button class="sort btn btn-secondary btn-sm" data-sort="email">
+      Sort by email
+    </button>
+    <table class='table table-striped table-bordered'>
+      <thead>
+        <tr>
+          <th>
+            Title
+          </th>
+          <th>
+            Organizer Email
+          </th>
+          <th>
+            <div>
+              Details
+            </div>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class='list'>
+        <% meetings.each do |meeting| %>
+          <tr>
+            <td class='title'>
+              <%= meeting.title %>
+            </td>
+            <td class='email'>
+              <%= meeting.organizer_email %>
+            </td>
+            <td>
+              <%= link_to 'Details', meeting_path(meeting.id) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p>
+    No meetings found.
+  </p>
+<% end %>

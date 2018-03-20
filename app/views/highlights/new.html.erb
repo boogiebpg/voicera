@@ -1,0 +1,7 @@
+<h1><%= "Meeting #{@meeting.id}" %></h1>
+
+<h1>New Meeting</h1>
+
+<%= render 'highlight_form', highlight: @highlight, meeting: @meeting %>
+
+<%= link_to 'Back', meeting_path(@meeting.id) %>
