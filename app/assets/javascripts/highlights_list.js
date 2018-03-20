@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+document.addEventListener("turbolinks:load", function() {
   var options = {
       valueNames: [ 'start_time', 'end_time', 'highlight_text' ]
   };

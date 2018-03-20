@@ -1,5 +1,5 @@
 class HighlightsController < ApplicationController
-  before_action :set_meeting
+  before_action :set_meeting, except: [:show]
 
   def new
     @highlight = @meeting.highlights.new
